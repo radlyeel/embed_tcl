@@ -1,0 +1,16 @@
+Exercise 1:
+  Create a program that will prompt the user for a Tcl script,
+    in the form of a filename, and interpret the file.
+
+Exercise 2:
+  Add variables of different types that can be read and modified
+    by the Tcl Script.
+
+Exercise 3:
+  Add functions to the C program that can be called by the script.
+
+
+Reference:  Practical Programming in Tcl and Tk, 4th Editiion
+  https://learning.oreilly.com/library/view/practical-programming-in/0130385603/ch47.html
+
+
