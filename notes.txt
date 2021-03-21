@@ -1,6 +1,6 @@
 Exercise 1:
-  Create a program that will prompt the user for a Tcl script,
-    in the form of a filename, and interpret the file.
+  Create a program that will prompt the user for a Tcl script.
+    TBD: How to handle multi-line scripts?
 
 Exercise 2:
   Add variables of different types that can be read and modified
