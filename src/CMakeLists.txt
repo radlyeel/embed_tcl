@@ -6,18 +6,22 @@ set(CMAKE_LEGACY_CYGWIN_WIN32 0)
 
 project("EmbedTcl")
 
-# Get info for Boost and Tcl
-#find_package(Boost 1.32 REQUIRED COMPONENTS program_options)
+# Get info for Tcl
 find_package(Tcl)
 
-#include_directories(SYSTEM ${Boost_INCLUDE_DIR})
+# Assume we found it; TODO: Handle failure to find it
 include_directories(SYSTEM ${TCL_INCLUDE_PATH})
 
+# TCL Bindings
+add_library(tcl_ext SHARED
+  tcl_bindings
+  )
+target_link_libraries(tcl_ext ${TCL_LIBRARY})
+
+# Main program
 add_executable(embedtcl
         main.c
         )
-
-#target_link_libraries(embedtcl ${Boost_LIBRARIES} ${TCL_LIBRARY})
 target_link_libraries(embedtcl ${TCL_LIBRARY})
 
 # What is this for?

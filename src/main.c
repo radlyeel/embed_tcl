@@ -2,6 +2,27 @@
 #include <string.h>
 #include <tcl/tcl.h>
 
+/* This works:
+Tcl: load libtcl_ext.dylib Random
+Tcl: package require random
+Tcl: puts [random 25]
+11
+Tcl: puts [random 25]
+2
+Tcl: for {set i 0} {$i < 10} {incr i} {puts [random 10]}
+5
+3
+5
+6
+2
+9
+1
+2
+7
+0
+Tcl: exit
+*/
+
 #define MAX_INPUT_LENGTH 1000
 
 int main(int argc, char* argv[]) {
